@@ -38,6 +38,14 @@ impl<'a> Inspectable for &'a str {
         false
     }
 }
+impl Inspectable for char {
+    type Attributes = ();
+
+    fn ui(&mut self, ui: &mut egui::Ui, _: Self::Attributes, _: &mut Context) -> bool {
+        ui.label(&*self.to_string());
+        false
+    }
+}
 
 impl Inspectable for bool {
     type Attributes = ();
