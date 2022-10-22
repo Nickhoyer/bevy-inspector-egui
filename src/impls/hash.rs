@@ -1,7 +1,6 @@
-use std::collections::HashMap;
 use std::hash::Hash;
 
-use bevy::prelude::App;
+use bevy::{prelude::App, utils::hashbrown::HashMap};
 
 use crate::{egui, Context};
 use crate::{utils, Inspectable};
